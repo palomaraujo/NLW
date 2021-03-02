@@ -1,3 +1,5 @@
+//teste comentario
+
 export function ExperienceBar(){
     return(
         <header className="experience-bar">
