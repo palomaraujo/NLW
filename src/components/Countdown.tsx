@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from '../styles/components/Countdown.module.css'
 
+//Para evitar que o timeout execute pela ultima vez antes de parar
 let countdownTimeout: NodeJS.Timeout;
 
 export function Countdown(){
@@ -20,6 +21,7 @@ export function Countdown(){
     }
 
     function resetCountdown(){
+        //Para a execução do countdown sem que o timeout execute mais uma vez
         clearTimeout(countdownTimeout);
         setIsActive(false);
         setTime(25*60);
